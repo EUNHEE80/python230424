@@ -19,9 +19,10 @@ class Student(Person): #Person 클래스를 상속 받는다
         self.studentID = studentID
     #상속받은 메서드를 재정의
     def printInfo(self):
-        print("Info(Name:{0}, Phone Number: {1})".format(self.name, self.phoneNumber))    
-        print("Info(Subject:{0}, StudentID: {1})".format(self.subject, self.studentID))  
-
+        #print("Info(Name:{0}, Phone Number: {1})".format(self.name, self.phoneNumber))    
+        #print("Info(Subject:{0}, StudentID: {1})".format(self.subject, self.studentID))  
+        print("Info(Name:{0}, Phone Number: {1}, Subject:{2}, StudentID: {3})".format(self.name, self.phoneNumber, self.subject, self.studentID))  
+        
 #인스턴스 생성
 p = Person("전우치", "010-222-1234")
 s = Student("이순신", "010-111-1234", "빅데이터", "201122")
