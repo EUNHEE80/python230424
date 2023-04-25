@@ -1,3 +1,4 @@
+# namespace 생략
 from functools import *
 
 def intersect(*ar):
