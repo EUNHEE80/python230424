@@ -27,4 +27,6 @@ print("운영체제이름:{0}".format(name))
 
 lst = glob.glob("c:\\work\\*.py")
 print(lst)
-print(count(lst))
+print(len(lst)) #파일 개수
+for item in lst:
+    print(item)
