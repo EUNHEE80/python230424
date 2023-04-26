@@ -1,8 +1,8 @@
-# db1.py
+# db2.py
 import sqlite3
 
-#연결객체를 생성(메모리에서 연습)
-con = sqlite3.connect(":memory:")
+#연결객체를 생성(물리적인 파일에 저장)
+con = sqlite3.connect("c:\\work\\sample.db")
 #SQL 구문을 실행할 커서객체
 cur = con.cursor()
 #테이블 구조(스키마) 생성
@@ -24,5 +24,13 @@ cur.executemany("insert into PhoneBook (name, phoneNum) values " +
 
 #검색
 cur.execute("select * from PhoneBook;")
-for row in cur:
-    print(row)
+print("---fetchone()---")
+print(cur.fetchone())
+cur.execute("select * from PhoneBook;")
+print("---fetchmany(2)---") # cur.execute를 하지 않으면 앞 실행 수행으로 홍길동이 보여지고 사라지므로 이순신, 전우치가 출력된다
+print(cur.fetchmany(2))
+cur.execute("select * from PhoneBook;")
+print("---fetchall()---")
+print(cur.fetchall())
+#작업 정상 종료
+con.commit()
