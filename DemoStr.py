@@ -20,4 +20,4 @@ print(result)
 lst = result.split()
 print(lst)
 print("--- 다시 하나의 문자열---")
-print("-".join(lst)) #구분자(:)로 나눠서 조인해라
+print("-".join(lst)) #구분자(-)로 나눠서 조인해라
