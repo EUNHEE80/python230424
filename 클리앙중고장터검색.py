@@ -27,12 +27,7 @@ for n in range(0,10):
         #                        </span>
 
         for item in list:
-                try:
-                        title = item.text.strip()
-                        print(title) 
-                        #if (re.search('아이폰', title)):
-                        #        print(title.strip())
-                        #        print('https://www.clien.net'  + item['href'])
-                # error 처리
-                except:
-                        pass
+                title = item.text.strip()
+                #print(title)
+                if(re.search('아이패드',title)):
+                        print(title)
